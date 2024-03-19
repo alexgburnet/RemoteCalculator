@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f97c11e5-2958-49cf-832a-0368c26b0b1a" name="Changes" comment="Works for first request">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f97c11e5-2958-49cf-832a-0368c26b0b1a" name="Changes" comment="Socket no longer closed but result is null">
       <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710867457855</updated>
-      <workItem from="1710867458951" duration="4273000" />
+      <workItem from="1710867458951" duration="4720000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -106,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710870735219</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Socket no longer closed but result is null">
+      <option name="closed" value="true" />
+      <created>1710872507282</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710872507282</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +126,7 @@
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="First Implementation of Client" />
     <MESSAGE value="Works for first request" />
-    <option name="LAST_COMMIT_MESSAGE" value="Works for first request" />
+    <MESSAGE value="Socket no longer closed but result is null" />
+    <option name="LAST_COMMIT_MESSAGE" value="Socket no longer closed but result is null" />
   </component>
 </project>

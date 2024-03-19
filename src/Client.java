@@ -37,13 +37,13 @@ public class Client implements Runnable{
         }
     }
 
-    public void sendCalculation() {
+    public synchronized void sendCalculation() {
 
         writer.println(calculation + "#");
 
     }
 
-    public void getResult() {
+    public synchronized void getResult() {
 
         try {
 
@@ -59,18 +59,16 @@ public class Client implements Runnable{
     @Override
     public void run() {
 
-        while (true) {
-            getCalculation();
-            sendCalculation();
-            getResult();
-        }
+        getCalculation();
+        sendCalculation();
+        getResult();
 
     }
 
     public static void main(String[] args) {
-
-        Client client = new Client();
-        client.run();
-
+        while(true) {
+            Client client = new Client();
+            client.run();
+        }
     }
 }
