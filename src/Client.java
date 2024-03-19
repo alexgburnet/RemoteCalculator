@@ -38,31 +38,23 @@ public class Client implements Runnable{
     }
 
     public synchronized void sendCalculation() {
-
         writer.println(calculation + "#");
-
     }
 
     public synchronized void getResult() {
-
         try {
-
             result = reader.readLine();
             System.out.println("Result: " + result);
-
         } catch (Exception e) {
             System.out.println("Exception: " + e);
         }
-
     }
 
     @Override
     public void run() {
-
         getCalculation();
         sendCalculation();
         getResult();
-
     }
 
     public static void main(String[] args) {

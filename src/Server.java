@@ -25,16 +25,13 @@ public class Server {
 
         while (true) {
             try {
-
                 Socket client = socket.accept();
                 Service s = new Service(client);
                 s.start();
-
             } catch (IOException e) {
                 System.out.println("Exception: " + e);
             }
         }
-
     }
 
     public void shutdown() {
@@ -46,7 +43,6 @@ public class Server {
     }
 
     public static void main(String args[]) {
-
         Server server = new Server();
         server.executeCycle();
     }
