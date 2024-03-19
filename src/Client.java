@@ -6,6 +6,11 @@ public class Client implements Runnable{
     public String serverIP = "127.0.0.1";
     public int serverPort = 6868;
     public Socket socket;
+    private BufferedReader reader;
+    private PrintWriter writer;
+
+    private OutputStream out;
+    private
     String calculation;
 
     String result;
@@ -13,6 +18,10 @@ public class Client implements Runnable{
     Client() {
         try {
             this.socket = new Socket(serverIP, serverPort);
+            InputStream in = socket.getInputStream();
+            this.reader = new BufferedReader(new InputStreamReader(in));
+            this.out = socket.getOutputStream();
+            this.writer = new PrintWriter(out, true);
         } catch (IOException e) {
             System.out.println("Exception: " + e);
         }
@@ -30,22 +39,13 @@ public class Client implements Runnable{
 
     public void sendCalculation() {
 
-        try {
-            OutputStream out = socket.getOutputStream();
-            PrintWriter writer = new PrintWriter(out, true);
-            // Add terminal Character
-            writer.println(calculation + "#");
-        } catch (Exception e) {
-            System.out.println("Exception: " + e);
-        }
+        writer.println(calculation + "#");
 
     }
 
     public void getResult() {
 
         try {
-            InputStream in = socket.getInputStream();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 
             result = reader.readLine();
             System.out.println("Result: " + result);
