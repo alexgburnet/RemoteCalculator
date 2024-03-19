@@ -2,7 +2,7 @@
 
 ### Objective of project
 
-To consolidate understanding of Client - server architecture in Java using TCP.
+To consolidate understanding of Client - Server architecture in Java using TCP.
 
 ### Outline of Project:
 
