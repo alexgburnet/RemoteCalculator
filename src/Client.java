@@ -33,7 +33,8 @@ public class Client implements Runnable{
         try {
             OutputStream out = socket.getOutputStream();
             PrintWriter writer = new PrintWriter(out, true);
-            writer.println(calculation);
+            // Add terminal Character
+            writer.println(calculation + "#");
         } catch (Exception e) {
             System.out.println("Exception: " + e);
         }
@@ -47,7 +48,7 @@ public class Client implements Runnable{
             BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 
             result = reader.readLine();
-            System.out.println("Result");
+            System.out.println("Result: " + result);
 
         } catch (Exception e) {
             System.out.println("Exception: " + e);

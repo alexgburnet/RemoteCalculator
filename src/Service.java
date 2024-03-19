@@ -24,6 +24,8 @@ public class Service extends Thread{
 
             request = tmp.split(" ");
 
+            System.out.println("Request: " + tmp);
+
         } catch (IOException e) {
             System.out.println("Socket Exception: " + e);
         }

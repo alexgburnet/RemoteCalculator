@@ -19,7 +19,7 @@ public class Server {
 
     }
 
-    public void executeCucle() {
+    public void executeCycle() {
 
         // Listen for connections, accept and start a new thread for each.
 
@@ -48,7 +48,7 @@ public class Server {
     public static void main(String args[]) {
 
         Server server = new Server();
-        server.executeCucle();
+        server.executeCycle();
     }
 
 
