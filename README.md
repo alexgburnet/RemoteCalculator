@@ -15,7 +15,7 @@ To consolidate understanding of Client - Server architecture in Java using TCP.
 -   Sends the calculation to the server
 -   Awaits the response and prints the result
 
-Calculations are In the form of "<OPERATION> <num1> <num2>" where OPERATION is either + or *, num1 and num2 are single digit numbers.
+Calculations are In the form of "<OPERATION> <num1> <num2>" where OPERATION is either + or *, num1 and num2 are integers.
 > Note that no edge case handling has been implemented here to check if that the input format is correct, as this project was an exercise to test my understanding of the server implementation, not the calculator!
 
 **Server.java:**
